@@ -1,0 +1,394 @@
+/* GLOBAL */
+:root{
+   --accent-color: #ED1C24; 
+}
+
+/* Ändra bakrundsfärgen när man drar över text */
+::selection{
+    background: var(--accent-color);
+    color: white;
+}
+
+::-moz-selection{
+    background: var(--accent-color); /* Ändrar i firefox */
+    color: white;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    color: white;
+}
+
+body{
+    font-family: 'Raleway', sans-serif;
+    background: black;
+}
+
+body,html{
+    width: 100%;
+    height: 100%;
+}
+
+.hero{
+    width: 100%;
+    height: 100%;
+}
+
+/* HEADER */
+header{
+    width: 100%;
+    height: 40px;
+    background: transparent;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    transition: .3s ease-in-out all;
+    position: fixed;
+    z-index: 9999; /* Får headern att hamna över bilderna i 'article' */
+}
+
+header > *{
+    width: 33.333333333333%;
+}
+
+/* NAV */
+nav{
+
+}
+
+#main_nav{
+    list-style: none;
+}
+
+.nav_item{
+    display: inline-block;
+    padding-left: 15px;
+}
+
+.nav_item a{
+    text-transform: uppercase;
+    text-decoration: none;
+    color: white;
+    margin: 10px;
+    transition: .3s; /* Få färgen att bytas mjukt */
+    font-weight: 700;
+    text-shadow: 1px 1px 0px rgba(0,0,0,0.59);
+}
+
+.nav_item a:hover{
+    color: var(--accent-color); /* Bli till accent färgen när man hoverar över länken */
+}
+
+/* LOGO */
+#logo_container{
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#logo, #logo_black{
+    height: 25px;
+    transition: .1s;
+}
+
+#logo_black{
+    display: none;
+}
+
+#logo{
+    display: block;
+}
+
+/* HÖGER INFO (öppettider, profil, etc.) */
+#right_info{
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+
+#opening_hours{
+    cursor: pointer; /* Får det att se ut som att man kan klicka eller interagera med elementet */
+    padding-right: 20px;
+}
+
+#opening_hours > b{
+    color: white
+}
+
+#opening_hours{
+    color: white;
+}
+
+.login{
+    padding-right: 15px;
+    font-size: 21px;
+    position: relative;
+}
+
+.login i{
+    cursor: pointer;
+}
+
+/* LOGIN BOX */
+.login_box{
+    width: 300px;
+    height: 0;
+    position: absolute;
+    top: 30px;
+    right: 5px;
+    background: white;
+    overflow: hidden;
+    border: 0;
+}
+
+.login_box *{
+    color: black;
+}
+
+.login_open{
+    height: 400px;
+}
+
+.login_box h3{
+    padding-top: 10px;
+    text-align: center;
+}
+
+.login_box input:not([type="submit"]){
+    width: 80%;
+    border: 0;
+    border-bottom: 1px solid black;
+    margin: 0 auto;
+    padding: 5px;
+    font-size: 16px;
+}
+
+#login_form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.input_span_container{
+    /*display: flex;
+    width: 100%;
+    justify-content: center;*/
+}
+
+/* HEADER OPEN (när man scrollat ner lite) */
+.open{
+    height: 70px;
+    background: white;
+}
+
+.open #opening_hours > b{
+    color: black
+}
+
+.open #opening_hours{
+    color: black;
+}
+
+.open .nav_item a{
+    color: black;
+    text-shadow: none;
+}
+
+.open .nav_item a:hover{
+    color: var(--accent-color);
+}
+
+.open #logo{
+    height: 35px;
+}
+
+.open #logo_black{
+    display: block;
+}
+
+.open #logo{
+    display: none;
+}
+
+.open .login_open{
+    border: 1px solid #333;
+}
+
+.open .login i{
+    color: black;
+}
+
+/* MAIN CONTENT FULL IMAGE */
+.full_bg{
+    background-image: url('../assets/images/first_page_full.jpg');
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+    /* Använder flexbox här för att få "scroll down" knappen längst ner i mitten på bilden */
+    display: flex;
+    justify-content: center;
+    align-items: end;
+}
+
+.full_bg > div{
+    text-align: center;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.full_bg div, .full_bg i{
+    color: white;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.full_bg a{
+    text-decoration: none;
+}
+
+.full_bg i{
+    width: 20px;
+}
+
+/* FOOTER */
+footer{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#copyright{
+    width: 100%;
+    text-align: center;
+    color: white;
+}
+
+.footer_flex{
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    padding: 50px 0 30px 0;
+}
+
+.footer_flex > section{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 33.333333333%;
+}
+
+#copyright{
+    padding-bottom: 20px;
+}
+
+.footer_address p, .footer_opening_hours span{
+    font-size: 1.3em;
+}
+
+.socials{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding-bottom: 20px;
+}
+
+.social i{
+    font-size: 31px;
+    margin: 0 10px;
+}
+
+/* KARTAN. Från https://www.embedgooglemap.net */
+.mapouter{position:relative;text-align:right;height:250px;width:350px;}
+.gmap_canvas {overflow:hidden;background:none!important;height:250px;width:350px;}
+
+/* MAIN CONTENT */
+main{
+    width: 100%;
+}
+
+/* Article */
+.section{
+    width: 100%;
+    height: 250px;
+    background: black;
+    display: flex;
+}
+
+
+/* clip path ger "backen" vid bilderna */
+/*.one img{
+    -webkit-clip-path: polygon(0 0, 100% 0, 70% 100%, 48% 100%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 70% 100%, 48% 100%, 0 100%);
+}
+
+.two img{
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 48% 100%, 20% 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 48% 100%, 20% 100%);
+}*/
+
+.inner-image{
+    width: 400px;
+    background: black;
+}
+
+.inner-text{
+    width: calc(100% - 350px);
+    background: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    color: white;
+    font-size: 18px;
+}
+
+/* 
+    Varannan 'artikel' ska ha bilden på höger och texten på vänster och varannan ska ha tvärt om.
+    Med hjälp av flex är detta väldigt lätt då man bara kan använda sig av order.
+    Om man sätter klassen alt1 på artikeln hamnar bilden till höger och texten till vänster.
+    Om man sätter klassen alt2 på artikeln hamnar bilden till vänster och texten till höger.
+*/
+.one .inner-image{ order: 1; }
+.one .inner-text{ order: 2; }
+
+.two .inner-image{ order: 2; }
+.two .inner-text{ order: 1; }
+
+/* Front page images */
+.image{
+    height: 500px;
+
+    /* Parallax */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.fp1{
+    background-image: url('../assets/images/fp-1.jpg');
+}
+
+.fp2{
+    background-image: url('../assets/images/fp-2.jpg');
+}
+
+.fp3{
+    background-image: url('../assets/images/fp-3.jpg');
+}
+
+/* 
+TODO: FIXA SNEA KANTER VID BILDERNA
+
+1195px => tablet
+*/

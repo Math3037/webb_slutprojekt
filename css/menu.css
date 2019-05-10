@@ -1,0 +1,52 @@
+main{
+    padding-top: 50px;
+}
+
+main h1{
+    text-align: center;
+    padding-bottom: 50px;
+}
+
+#menu_list{
+    width: 50%;
+    margin: 0 auto;
+}
+
+.menu_list_item{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0;
+}
+
+.menu_item_title{
+    font-weight: 700;
+    font-size: 1.3em;
+    padding-bottom: 5px;
+}
+
+.menu_item_price{
+    font-weight: 700;
+    font-size: 1.2em;
+    padding-bottom: 5px;
+}
+
+.menu_item_desc{
+    font-style: italic;
+}
+
+.menu_list_category{
+    color: var(--accent-color);
+    list-style-type: none;
+    font-weight: 700;
+    font-size: 1.5em;
+    padding-top: 40px;
+    text-transform: uppercase;
+}
+
+.menu_list_category:first-of-type{
+    padding-top: 0;
+}
+
+.menu_item_right{
+    text-align: right;
+}
