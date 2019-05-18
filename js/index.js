@@ -47,7 +47,3 @@ $('a[href*="#"]')
     }
   }
 });
-
-$('.login i').click(function(e){
-  $('.login_box').toggleClass('login_open');
-})

@@ -14,8 +14,8 @@ CREATE TABLE info(
 CREATE TABLE users(
     `id` INT(8) PRIMARY KEY AUTO_INCREMENT NOT NULL,
     `user_id` INT(4) NOT NULL,
-    `username` VARCHAR(32) NOT NULL,
     `email` VARCHAR(128) NOT NULL,
+    `password` VARCHAR(128) NOT NULL,
     `name` VARCHAR(50) NOT NULL,
     `phone_number` VARCHAR(10) NOT NULL,
     `points` INT(10) NULL DEFAULT 100

@@ -132,53 +132,6 @@ nav{
     cursor: pointer;
 }
 
-/* LOGIN BOX */
-.login_box{
-    width: 300px;
-    height: 0;
-    position: absolute;
-    top: 30px;
-    right: 5px;
-    background: white;
-    overflow: hidden;
-    border: 0;
-}
-
-.login_box *{
-    color: black;
-}
-
-.login_open{
-    height: 400px;
-}
-
-.login_box h3{
-    padding-top: 10px;
-    text-align: center;
-}
-
-.login_box input:not([type="submit"]){
-    width: 80%;
-    border: 0;
-    border-bottom: 1px solid black;
-    margin: 0 auto;
-    padding: 5px;
-    font-size: 16px;
-}
-
-#login_form {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.input_span_container{
-    /*display: flex;
-    width: 100%;
-    justify-content: center;*/
-}
-
 /* HEADER OPEN (när man scrollat ner lite) */
 .open{
     height: 70px;

@@ -22,7 +22,12 @@
             </div>
         </section>
         <section class="footer_opening_hours">
-            <span><b>Open today: </b> 18 - 01</span>
+            <?php
+                if($row['closed']){
+                    ?> <span><b>Open today: </b> Closed</span><?php
+                }else{?>
+                <span><b>Open today: </b> <?php echo $open . " - " . $close; ?></span>
+            <?php } ?>
         </section>
     </div>
     <div class="socials">
@@ -35,3 +40,5 @@
     </div>
     <p id="copyright"><b>&copy; Sakana 2019</b></p>
 </footer>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="./js/index.js"></script>
