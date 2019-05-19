@@ -5,7 +5,10 @@ require './db.php';
 
 $empty = array();
 
-print_r($_SESSION);
+if(isset($_SESSION['login']) && $_SESSION['login']){
+    header("Location: ./profile");
+    exit;
+}
 
 if(isset($_POST['submit'])){
     if(isset($_POST['email']) && isset($_POST['password'])){

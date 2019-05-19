@@ -19,22 +19,27 @@ class Auth{
             // VALID USER
             $user = mysqli_fetch_assoc($checkUserQuery);
 
-            if(password_verify($user['password'], $password_cand)){
+            if(password_verify($password_cand, $user['password'])){
                 error_log("CORRECT PASSWORD");
-                $_SESSION['login'] = true;
-                $_SESSION['user'] = $user;
+                $_SESSION["login"] = true;
+                $_SESSION["user"] = $user;
+
+                error_log(print_r($_SESSION, true));
     
                 header('Location: ./');
+                exit;
             }else{
                 error_log("INVALID PASSWORD");
-                $_SESSION['login_error'] = 'invalid_password';
+                $_SESSION["login_error"] = 'invalid_password';
                 header('Location: ./login');
+                exit;
             }
         }else{
             // INVALID USERNAME
             error_log("INVALID EMAIL");
-            $_SESSION['login_error'] = 'invalid_email';
+            $_SESSION["login_error"] = 'invalid_email';
             header('Location: ./login');
+            exit;
         }
     }
 
@@ -55,7 +60,7 @@ class Auth{
                 if(!preg_match('/[0-9]+/', $name)){
                     if(mysqli_num_rows($checkUserQuery) > 0){
                         error_log("USER EXISTS");
-                        $_SESSION['register_error'] = 'user_exists';
+                        $_SESSION["register_error"] = 'user_exists';
                         header("Location: ./register");
                     }else{
                         $insertSql = "INSERT INTO users(user_id, email, password, name, phone_number) VALUES($userId, '$email', '$password', '$name', '$phone_number')";
@@ -66,21 +71,20 @@ class Auth{
                         $this->login($email, $password);
                     }
                 }else{
-                    $_SESSION['register_error'] = 'invalid_name';
+                    $_SESSION["register_error"] = 'invalid_name';
                     header("Location: ./register");
+                    exit;
                 }
             }else{
-                $_SESSION['register_error'] = 'invalid_phone';
-                header("Location: ./register"); 
+                $_SESSION["register_error"] = 'invalid_phone';
+                header("Location: ./register");
+                exit;
             }
         }else{
-            $_SESSION['register_error'] = 'invalid_email';
+            $_SESSION["register_error"] = 'invalid_email';
             header("Location: ./register");
+            exit;
         }
-    }
-
-    function logout(){
-        session_destroy();
     }
 
     function generateId(){
