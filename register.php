@@ -3,6 +3,11 @@ require './config.php';
 require './models/auth.php';
 require './db.php';
 
+if(isset($_SESSION['login']) && $_SESSION['login']){
+    header("Location: ./profile");
+    exit;
+}
+
 $invalid = array();
 $empty = array();
 

@@ -2,9 +2,6 @@
 
 include './db.php';
 
-session_start();
-print_r($_SESSION);
-
 $dow = date('N');
 $date = date('Y-m-d');
 $opening_hours_results = mysqli_query($GLOBALS['db'], "SELECT open_value, close_value, closed FROM opening_hours WHERE day_value='$dow' LIMIT 1");
@@ -52,7 +49,7 @@ if(mysqli_num_rows($abnormal_opening_hours_results) > 0){
             <?php } ?>
         </span>
         <div class="login">
-            <a href="<?php echo (isset($_SESSION['login']) && $_SESSION['login']) ? "./login" : "./profile"; ?>"><i class="fas fa-user"></i></a>
+            <a href="<?php echo (isset($_SESSION['login']) && $_SESSION['login']) ? "./profile" : "./login"; ?>"><i class="fas fa-user"></i></a>
         </div>
     </div>
     <!-- TODO: Vid hover, dra ner en lista med alla dagars öppettider -->
