@@ -100,6 +100,9 @@ if(isset($_POST['submit'])){
                     <input type="submit" name="submit" value="Log in" id="submit">
                     <div>or create an account <a href="./register">here</a></div>
                 </div>
+                <div class="input_container forgot_container">
+                    <div><a href="./forgot">Forgot password?</a></div>
+                </div>
             </form>
         </div>
     </main>

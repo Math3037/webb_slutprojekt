@@ -18,7 +18,11 @@
 </head>
 <body>
 
-    <?php include './include/header.php'; ?>
+    <?php 
+    include './include/header.php'; 
+    $nameSplit = explode(" ", $_SESSION['user']['name']);
+    $initials = array(substr($nameSplit[0][0], 0), substr($nameSplit[1][0], 0))
+    ?>
 
     <?php
     
@@ -31,25 +35,22 @@
     <main class="content">
         <div class="profile">
             <div class="top">
-                <div class="profile_image_container">
-                    <div class="profile_image"></div>
-                </div>
                 <div class="name"><h1><?php echo $greetings[array_rand($greetings)] . ", " . $_SESSION['user']['name'] ?>!</h1></div>
             </div>
             <div class="bottom">
-                <div class="sidebar">
-                    <div class="points_container sidebar_container">
-                        <div class="points_text"><b>Points: </b><?php echo $_SESSION['user']['points']; ?><div class="help_text" onClick="toggleModal('.helpModal');">What is this?</div></div>
-                    </div>
-                    <div class="id_conatiner sidebar_container">
-                        <div class="id_text"><b>ID: </b>#<?php echo $_SESSION['user']['user_id']; ?></div>
-                        <button class="id_button" onClick="toggleModal('.barcodeModal');">Show barcode</button>
-                    </div>
-                    <div class="visits_container sidebar_container">
-                        <div class="visits_text"><b>No. visits: </b> 12</div>
-                    </div>
-                </div>
                 <div class="profile_info">
+                    <div class="profile_meta">
+                        <div class="points_container meta_container">
+                            <div class="points_text"><b>Points: </b><?php echo $_SESSION['user']['points']; ?><div class="help_text" onClick="toggleModal('.helpModal');">What is this?</div></div>
+                        </div>
+                        <div class="visits_container meta_container">
+                            <div class="visits_text"><b>Visits: </b> <?php echo $_SESSION['user']['visits']; ?></div>
+                        </div>
+                        <div class="id_conatiner meta_container">
+                            <div class="id_text"><b>ID: </b>#<?php echo $_SESSION['user']['user_id']; ?></div>
+                            <button class="id_button" onClick="toggleModal('.barcodeModal');">Show barcode</button>
+                        </div>
+                    </div>
                     <div class="profile_info_title"><h3>Profile information</h3></div>
                     <form action="./post/update_profile_info" method="post" id="profile_info_form">
                         <!--

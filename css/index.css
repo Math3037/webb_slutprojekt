@@ -53,7 +53,7 @@ header > *{
     width: 33.333333333333%;
 }
 
-/* NAV */
+/* #region NAV */
 nav{
 
 }
@@ -81,7 +81,9 @@ nav{
     color: var(--accent-color); /* Bli till accent färgen när man hoverar över länken */
 }
 
-/* LOGO */
+/* #endregion NAV */
+
+/* #region LOGO */
 #logo_container{
     height: 70px;
     display: flex;
@@ -102,7 +104,9 @@ nav{
     display: block;
 }
 
-/* HÖGER INFO (öppettider, profil, etc.) */
+/* #endregion LOGO */
+
+/* #region RIGHT NAV */
 #right_info{
     display: flex;
     justify-content: right;
@@ -110,7 +114,6 @@ nav{
 }
 
 #opening_hours{
-    cursor: pointer; /* Får det att se ut som att man kan klicka eller interagera med elementet */
     padding-right: 20px;
 }
 
@@ -131,6 +134,8 @@ nav{
 .login i{
     cursor: pointer;
 }
+
+/* #endregion RIGHT NAV */
 
 /* HEADER OPEN (när man scrollat ner lite) */
 .open{

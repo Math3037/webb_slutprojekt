@@ -55,7 +55,7 @@
                         <div class="menu_item_desc"><?php echo $row['desc']; ?></div>
                     </div>
                     <div class="menu_item_right">
-                        <div class="menu_item_price"><?php echo $row['price']; ?>kr</div>
+                        <div class="menu_item_price"><?php echo $row['price']; ?>kr / <?php echo $row['price']*2; ?>P</div>
                         <div class="menu_item_meta">
                             <?php for($x=0; $x<$row['strength']; $x++){ ?>
                                 <i class="fas fa-pepper-hot"></i>

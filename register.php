@@ -122,7 +122,7 @@ if(isset($_SESSION['register_error'])){
                     ?>
                 </div>
                 <div class="input_container">
-                    <input type="number" name="phone_number" class="question" required autocomplete="off" />
+                    <input type="text" pattern="[0-9]+" name="phone_number" class="question" required autocomplete="off" />
                     <label for="phone_number"><span>Phone Number</span></label>
                     <?php 
                     if(isset($_SESSION['register_error'])){

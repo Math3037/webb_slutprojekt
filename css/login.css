@@ -40,6 +40,15 @@
   text-decoration: none;
 }
 
+.forgot_container{
+  margin-top: 10px;
+}
+
+.forgot_container a{
+  text-decoration: none;
+  color: grey;
+}
+
 /* https://codepen.io/atunnecliffe/pen/gpKzQw */
 
 input:focus {

@@ -29,8 +29,7 @@ CREATE TABLE menu_items(
      `name` VARCHAR(50) NOT NULL,
      `desc` TEXT NOT NULL,
      `price` FLOAT NOT NULL,
-     `strength` INT(1) NULL DEFAULT 0,
-     `position` INT(2) NULL
+     `strength` INT(1) NULL DEFAULT 0
 );
 
 -- Opening hours
@@ -80,3 +79,7 @@ INSERT INTO opening_hours(day_value, open_value, close_value, closed) VALUES(4, 
 INSERT INTO opening_hours(day_value, open_value, close_value) VALUES(5, '18', '01');
 INSERT INTO opening_hours(day_value, open_value, close_value) VALUES(6, '18', '01');
 INSERT INTO opening_hours(day_value, open_value, close_value) VALUES(7, '16', '23');
+
+-- USERNAME: admin@sakana.se
+-- PASSWORD: admin
+INSERT INTO users(user_id, email, password, name, phone_number, visits) VALUES(1234, "admin@sakana.se", "$2y$10$z9WaZMOQIzQtQ43LEg0wY..gsCLM1gj4rsYQFdFWJGugZ.6plMQ0i", "Admin User", "0123456789", 1);
