@@ -18,7 +18,8 @@ CREATE TABLE users(
     `password` VARCHAR(128) NOT NULL,
     `name` VARCHAR(50) NOT NULL,
     `phone_number` VARCHAR(10) NOT NULL,
-    `points` INT(10) NULL DEFAULT 100
+    `points` INT(10) NULL DEFAULT 100,
+    `visits` INT(4) NULL DEFAULT 0
 );
 
 -- MENU
