@@ -50,7 +50,79 @@
                     </div>
                 </div>
                 <div class="profile_info">
-                
+                    <div class="profile_info_title"><h3>Profile information</h3></div>
+                    <form action="./post/update_profile_info" method="post" id="profile_info_form">
+                        <!--
+                            Name
+                            Email
+                            Number
+                        -->
+                        <div class="input_container">
+                            <label for="name">Full name</label><br>
+                            <input type="text" id="input_name" name="name" value="<?php echo $_SESSION['user']['name']; ?>">
+                        </div>
+                        <div class="input_container">
+                            <label for="email">Email</label><br>
+                            <input type="email" id="input_email" name="email" value="<?php echo $_SESSION['user']['email']; ?>">
+                        </div>
+                        <div class="input_container">
+                            <label for="number">Phone number</label><br>
+                            <input type="text" pattern="[0-9]*" id="input_number" name="number" value="<?php echo $_SESSION['user']['phone_number']; ?>">
+                        </div>
+                        <?php 
+                            if(isset($_SESSION['profile_info_change_error'])){
+                                switch($_SESSION['profile_info_change_error']){
+                                    case 'empty':
+                                        ?> <span class="error">All fields must be filled</span> <?php
+                                        break;
+                                    case 'invalid_name':
+                                        ?> <span class="error">Invalid name, please only use letters and spaces</span> <?php
+                                        break;
+                                    case 'invalid_email':
+                                        ?> <span class="error">Invalid email</span> <?php
+                                        break;
+                                    case 'invalid_phone':
+                                        ?> <span class="error">Invalid phone number</span> <?php
+                                        break;
+                                }
+                            } 
+                        ?>
+                        <div class="input_container button_container">
+                            <button type="submit" name="submit">Save</button>
+                            <button type="button" onClick="resetForm('<?php echo $_SESSION['user']['name']; ?>', '<?php echo $_SESSION['user']['email']; ?>', '<?php echo $_SESSION['user']['phone_number']; ?>');">Reset</button>
+                        </div>
+                    </form>
+
+                    <div class="profile_info_title"><h3>Password</h3></div>
+                    <form action="./post/update_password" method="post" id="password_reset_form">
+                        <div class="input_container">
+                            <label for="old_password">Old password</label><br>
+                            <input type="password" name="old_password" id="">
+                        </div>
+                        <div class="input_container">
+                            <label for="new_password">New password</label><br>
+                            <input type="password" name="new_password" id="">
+                        </div>
+                        <?php 
+                            if(isset($_SESSION['password_change_error'])){
+                                switch($_SESSION['password_change_error']){
+                                    case 'invalid':
+                                        ?> <span class="error">Invalid password</span> <?php
+                                        break;
+                                    case 'empty':
+                                        ?> <span class="error">Both fields must be filled</span> <?php
+                                        break;
+                                }
+                            } 
+                        ?>
+                        <div class="input_container button_container">
+                            <button type="submit" name="submit">Update</button>
+                        </div>
+                    </form>
+
+                    <div class="profile_info_title"><h3>Bookings</h3></div>
+                    <!-- ALL BOOKINGS UPCOMMING AND PAST, REMOVE UPCOMMING -->
+                    <!--<form action="./post/update_booking" method="post"></form>-->
                 </div>
             </div>
         </div>
@@ -64,7 +136,6 @@
                 <svg 
                     id="barcode"
                     jsbarcode-value="<?php echo $_SESSION['user']['user_id']; ?>"
-                    jsbarcode-displayValue="false"
                     jsbarcode-width="3"
                     jsbarcode-height="50"
                 ></svg>
@@ -76,7 +147,7 @@
         <div class="box">
             <div class="close_btn" onclick="toggleModal('.helpModal')"><i class="fas fa-times"></i></div>
             <div class="modalContent">
-                <p>When you make a purchase at Sakana you will get <b>1</b> point for every <b>2kr</b> you spend. You can than use the points to make other purches at Sakana, the price in points for each menu item is avalible at the resturant menu.</p>
+                <p>When you make a purchase at Sakana you will get <b>1 point</b> for every <b>2kr</b> you spend. You can then use the points to make other purches at Sakana, the price in points for each menu item is avalible at the resturant menu.</p>
             </div>
         </div>
     </div>
@@ -85,3 +156,7 @@
     <script src="./js/profile.js"></script>
 </body>
 </html>
+<?php
+unset($_SESSION['password_change_error']);
+unset($_SESSION['profile_info_change_error']);
+?>

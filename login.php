@@ -51,7 +51,7 @@ if(isset($_POST['submit'])){
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title><?php echo NAME; ?> | REGISTER</title>
+    <title><?php echo NAME; ?> | LOGIN</title>
     <link rel="stylesheet" href="./css/index.css">
     <link rel="stylesheet" href="./css/login.css">
     <?php include './include/head.php'; ?>
@@ -108,7 +108,7 @@ if(isset($_POST['submit'])){
 </html>
 <?php
 
-session_unset('register_error');
-session_unset('register_empty');
+unset($_SESSION['register_error']);
+unset($_SESSION['register_empty']);
 
 ?>

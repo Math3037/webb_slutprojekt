@@ -49,7 +49,16 @@
 
 .bottom .sidebar .id_text{padding-bottom: 10px;}
 
-.bottom .sidebar .id_button{
+.error{
+    color: var(--accent-color);
+}
+
+.error::before{
+    content: '* ';
+    font-size: 1.2em;
+}
+
+button{
     background: var(--accent-color);
     border: none;
     padding: 10px 20px;
@@ -93,11 +102,11 @@
     position: absolute;
     left: 50%;
     top: 50%;
-    width: 300px;
-    height: 150px;
+    width: 400px;
+    height: 200px;
     background: white;
-    margin-top: -95px;
-    margin-left: -150px;
+    margin-top: -120px;
+    margin-left: -200px;
     transition: margin .2s ease-in-out;
 }
 
@@ -136,7 +145,7 @@
 
 .helpModal p{
     color: black;
-    padding: 10px;
+    padding: 10px 30px;
 }
 
 .helpModal b{
@@ -149,7 +158,56 @@
 }
 
 .modal_open .box{
-    margin-top: -75px;
+    margin-top: -100px;
 }
 
 /* #endregion MODAL */
+
+/* #region PROFILE INFO */
+
+.profile_info{
+    padding: 15px;
+}
+
+.profile_info_title{
+    border-bottom: 2px solid var(--accent-color);
+    display: inline-block;
+    padding: 0 4px 3px 0;
+}
+
+.profile_info form{
+    margin: 15px 0;
+}
+
+.input_container{
+    margin: 20px 0;
+}
+
+.input_container label{
+    font-weight: 700;
+}
+
+.input_container input{
+    border: 0;
+    background: transparent;
+    border-bottom: 2px solid #333333;
+    padding: 7px;
+    font-size: 18px;
+    width: 300px;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
+input[type=number] {
+    -moz-appearance:textfield; /* Firefox */
+}
+
+.button_container button:first-of-type{
+    margin-right: 15px;
+}
+
+/* #endregion PROFILE INFO */
