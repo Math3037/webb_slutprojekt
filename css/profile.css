@@ -86,6 +86,7 @@
     z-index: 999999;
     opacity: 0;
     pointer-events: none;
+    transition: opacity .2s ease-in-out;
 }
 
 .modal .box{
@@ -95,8 +96,9 @@
     width: 300px;
     height: 150px;
     background: white;
-    margin-top: -75px;
+    margin-top: -95px;
     margin-left: -150px;
+    transition: margin .2s ease-in-out;
 }
 
 .modal .close_btn{
@@ -128,10 +130,26 @@
     color: black;
 }
 
-.barcodeModal{}
+.modal .close_btn i{
+    color: var(--accent-color);
+}
 
-.helpModal{
-    display: none;
+.helpModal p{
+    color: black;
+    padding: 10px;
+}
+
+.helpModal b{
+    color: black;
+}
+
+.modal_open{
+    opacity: 1;
+    pointer-events: all;
+}
+
+.modal_open .box{
+    margin-top: -75px;
 }
 
 /* #endregion MODAL */

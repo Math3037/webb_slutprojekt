@@ -39,11 +39,11 @@
             <div class="bottom">
                 <div class="sidebar">
                     <div class="points_container sidebar_container">
-                        <div class="points_text"><b>Points: </b><?php echo $_SESSION['user']['points']; ?><div class="help_text" onClick="toggleModal('helpModal');">What is this?</div></div>
+                        <div class="points_text"><b>Points: </b><?php echo $_SESSION['user']['points']; ?><div class="help_text" onClick="toggleModal('.helpModal');">What is this?</div></div>
                     </div>
                     <div class="id_conatiner sidebar_container">
                         <div class="id_text"><b>ID: </b>#<?php echo $_SESSION['user']['user_id']; ?></div>
-                        <button class="id_button" onClick="toggleModal('barcodeModal');">Show barcode</button>
+                        <button class="id_button" onClick="toggleModal('.barcodeModal');">Show barcode</button>
                     </div>
                     <div class="visits_container sidebar_container">
                         <div class="visits_text"><b>No. visits: </b> 12</div>
@@ -58,7 +58,7 @@
 
     <div class="barcodeModal modal">
         <div class="box">
-            <div class="close_btn"><i class="fas fa-times"></i></div>
+            <div class="close_btn" onclick="toggleModal('.barcodeModal')"><i class="fas fa-times"></i></div>
             <div class="modalContent">
                 <h2>Your ID</h2>
                 <svg 
@@ -72,9 +72,12 @@
         </div>
     </div>
 
-    <div class="helpModal">
+    <div class="helpModal modal">
         <div class="box">
-            <div class="close_btn"><i class="fas fa-times"></i></div>
+            <div class="close_btn" onclick="toggleModal('.helpModal')"><i class="fas fa-times"></i></div>
+            <div class="modalContent">
+                <p>When you make a purchase at Sakana you will get <b>1</b> point for every <b>2kr</b> you spend. You can than use the points to make other purches at Sakana, the price in points for each menu item is avalible at the resturant menu.</p>
+            </div>
         </div>
     </div>
     <?php include './include/footer.php'; ?>
