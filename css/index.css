@@ -345,6 +345,11 @@ main{
     background-image: url('../assets/images/fp-3.jpg');
 }
 
+.reg_error{
+    color: red;
+    padding: 5px 0;
+}
+
 /* 
 TODO: FIXA SNEA KANTER VID BILDERNA
 

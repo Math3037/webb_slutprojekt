@@ -85,7 +85,7 @@ if(isset($_POST['submit'])){
                     <?php 
                     if(isset($_SESSION['login_error'])){
                         if($_SESSION['login_error'] === 'invalid_password'){
-                            ?> <span class="reg_error">Incorrect password</span> <?php
+                            ?> <span class="reg_error">Invalid password, please try another one</span> <?php
                         }
                     }
                     
@@ -111,7 +111,7 @@ if(isset($_POST['submit'])){
 </html>
 <?php
 
-unset($_SESSION['register_error']);
-unset($_SESSION['register_empty']);
+unset($_SESSION['login_error']);
+unset($_SESSION['loginz_empty']);
 
 ?>

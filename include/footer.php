@@ -9,8 +9,8 @@
                 </div>
                 <br>
                 <div>
-                    <b>070 010 02 03</b><br>
-                    info@sakana.se
+                    <b><?php echo $phone; ?></b><br>
+                    <?php echo $email; ?>
                 </div>
             </div>
         </section>
@@ -23,7 +23,7 @@
         </section>
         <section class="footer_opening_hours">
             <?php
-                if($row['closed']){
+                if($opening_row['closed']){
                     ?> <span><b>Open today: </b> Closed</span><?php
                 }else{?>
                 <span><b>Open today: </b> <?php echo $open . " - " . $close; ?></span>

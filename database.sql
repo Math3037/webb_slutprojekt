@@ -25,7 +25,7 @@ CREATE TABLE users(
 -- FORGOTTEN PASSWORD
 CREATE TABLE forgotten(
     `id` INT(8) PRIMARY KEY AUTO_INCREMENT NOT NULL,
-    `key` VARCHAR(32) NOT NULL,
+    `token` VARCHAR(32) NOT NULL,
     `user` INT(8) NOT NULL,
     `created` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
 
@@ -62,8 +62,14 @@ CREATE TABLE abnormal_opening_hours(
 -- TABLE BOOKINGS
 CREATE TABLE dinner_table(
     `id` INT(8) PRIMARY KEY NOT NULL AUTO_INCREMENT,
-    `table_id` INT(2) NOT NULL,
     `seats` INT(2) NOT NULL
+);
+
+CREATE TABLE time_slot(
+    `id` INT(8) PRIMARY KEY NOT NULL AUTO_INCREMENT,
+    `day` INT(1) NOT NULL,
+    `start` VARCHAR(10) NOT NULL,
+    `end` VARCHAR(10) NOT NULL
 );
 
 CREATE TABLE bookings(
@@ -72,9 +78,9 @@ CREATE TABLE bookings(
     `user` INT(8) DEFAULT NULL,
     `name` VARCHAR(50) DEFAULT NULL,
     `phone_number` VARCHAR(10) DEFAULT NULL,
-    `start` TIME NOT NULL,
-    `end` TIME NOT NULL,
+    `timeslot` INT(8) NOT NULL,
 
+    FOREIGN KEY (`timeslot`) REFERENCES time_slot(id),
     FOREIGN KEY (`user`) REFERENCES users(id),
     FOREIGN KEY (`table`) REFERENCES dinner_table(id)
 );
@@ -82,6 +88,7 @@ CREATE TABLE bookings(
 INSERT INTO info(info_key, info_value) VALUES('phone', "070 021 05 91");
 INSERT INTO info(info_key, info_value) VALUES('email', "info@sakana.se");
 
+-- #region OPENING HOURS
 INSERT INTO opening_hours(day_value, open_value, close_value, closed) VALUES(1, '', '', 1);
 INSERT INTO opening_hours(day_value, open_value, close_value, closed) VALUES(2, '', '', 1);
 INSERT INTO opening_hours(day_value, open_value, close_value, closed) VALUES(3, '16', '23', 0);
@@ -89,6 +96,22 @@ INSERT INTO opening_hours(day_value, open_value, close_value, closed) VALUES(4, 
 INSERT INTO opening_hours(day_value, open_value, close_value) VALUES(5, '18', '01');
 INSERT INTO opening_hours(day_value, open_value, close_value) VALUES(6, '18', '01');
 INSERT INTO opening_hours(day_value, open_value, close_value) VALUES(7, '16', '23');
+-- #endregion OPENING HOURS
+
+-- #region TABLES
+INSERT INTO dinner_table(seats) VALUES(2); -- TABLE 1
+INSERT INTO dinner_table(seats) VALUES(2); -- TABLE 2
+INSERT INTO dinner_table(seats) VALUES(2); -- TABLE 3
+
+INSERT INTO dinner_table(seats) VALUES(4); -- TABLE 4
+INSERT INTO dinner_table(seats) VALUES(4); -- TABLE 5
+INSERT INTO dinner_table(seats) VALUES(4); -- TABLE 6
+INSERT INTO dinner_table(seats) VALUES(4); -- TABLE 7
+
+INSERT INTO dinner_table(seats) VALUES(8); -- TABLE 8
+INSERT INTO dinner_table(seats) VALUES(8); -- TABLE 9
+-- #endregion TABLES
+
 
 -- USERNAME: admin@sakana.se
 -- PASSWORD: admin

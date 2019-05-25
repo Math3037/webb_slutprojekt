@@ -3,13 +3,13 @@
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
-require '../lib/PHPMailer/Exception.php';
-require '../lib/PHPMailer/PHPMailer.php';
-require '../lib/PHPMailer/SMTP.php';
+require $_SERVER['DOCUMENT_ROOT'] . '/lib/PHPMailer/Exception.php';
+require $_SERVER['DOCUMENT_ROOT'] . '/lib/PHPMailer/PHPMailer.php';
+require $_SERVER['DOCUMENT_ROOT'] . '/lib/PHPMailer/SMTP.php';
 
 session_start();
 
-function sendPasswordResetMail(){
+function sendPasswordResetMail($token){
     $mail = new PHPMailer();
 
     $mail->IsSMTP();
@@ -27,7 +27,7 @@ function sendPasswordResetMail(){
 
     $mail->SetFrom("theo01sandell@gmail.com");
     $mail->Subject = "Sakana password reset";
-    $mail->Body = "";
+    $mail->Body = "Someone has requested to reset your password. <br> If you wish to do this, press the link below. <br> <a href=\"http://localhost/reset_password?token=$token\">http://localhost/reset_password?token=$token</a> <br> <b>This link is valid for 30 minutes</b>";
 
     $mail->AddAddress("theo01sandell@gmail.com");
 

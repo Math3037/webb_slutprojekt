@@ -150,7 +150,7 @@ if(isset($_SESSION['register_error'])){
 </html>
 <?php
 
-session_unset('register_error');
-session_unset('register_empty');
+unset($_SESSION['register_error']);
+unset($_SESSION['register_empty']);
 
 ?>

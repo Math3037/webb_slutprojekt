@@ -4,14 +4,14 @@
 
     $greetings = [
         'Welcome',
-        'Hello'
+        'Hello',
+        'Hi'
     ];
 ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <title><?php echo NAME; ?></title>
-    <link rel="stylesheet" href="./css/index.css">
     <link rel="stylesheet" href="./css/profile.css">
     <?php include './include/head.php'; ?>
 
@@ -19,9 +19,7 @@
 <body>
 
     <?php 
-    include './include/header.php'; 
-    $nameSplit = explode(" ", $_SESSION['user']['name']);
-    $initials = array(substr($nameSplit[0][0], 0), substr($nameSplit[1][0], 0))
+    include './include/header.php';
     ?>
 
     <?php
@@ -124,6 +122,7 @@
                     <div class="profile_info_title"><h3>Bookings</h3></div>
                     <!-- ALL BOOKINGS UPCOMMING AND PAST, REMOVE UPCOMMING -->
                     <!--<form action="./post/update_booking" method="post"></form>-->
+                    <a href="./logout" class="logout_txt"><button class="logout_button">Logout</button></a>
                 </div>
             </div>
         </div>

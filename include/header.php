@@ -9,18 +9,31 @@ $abnormal_opening_hours_results = mysqli_query($GLOBALS['db'], "SELECT open_valu
 
 $open;
 $close;
-$row;
+$opening_row;
 
 if(mysqli_num_rows($abnormal_opening_hours_results) > 0){
-    $row = mysqli_fetch_assoc($abnormal_opening_hours_results);
+    $opening_row = mysqli_fetch_assoc($abnormal_opening_hours_results);
 
-    $open = $row['open_value'];
-    $close = $row['close_value'];
+    $open = $opening_row['open_value'];
+    $close = $opening_row['close_value'];
 }else{
-    $row = mysqli_fetch_assoc($opening_hours_results);
+    $opening_row = mysqli_fetch_assoc($opening_hours_results);
 
-    $open = $row['open_value'];
-    $close = $row['close_value'];
+    $open = $opening_row['open_value'];
+    $close = $opening_row['close_value'];
+}
+$info_result = mysqli_query($GLOBALS['db'], "SELECT info_key, info_value FROM info");
+$info_row = mysqli_fetch_all($info_result, MYSQLI_ASSOC);
+
+$email;
+$phone;
+
+foreach($info_row as $row){
+    if($row['info_key'] == 'phone'){
+        $phone = $row['info_value'];
+    }else if($row['info_key'] == 'email'){
+        $email = $row['info_value'];
+    }
 }
 
 ?>
@@ -42,7 +55,7 @@ if(mysqli_num_rows($abnormal_opening_hours_results) > 0){
     <div id="right_info">
         <span id="opening_hours">
             <?php
-                if($row['closed']){
+                if($opening_row['closed']){
                     ?> <b>Open today: </b> Closed<?php
                 }else{?>
                 <b>Open today: </b><?php echo $open . " - " . $close; ?>

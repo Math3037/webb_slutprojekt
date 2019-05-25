@@ -1,7 +1,6 @@
 TODO:
     FIX BOOKINGS
     BOOKINGS TO PROFILE PAGE
-    IMPLEMENT FORGOT PASSWORD
     ADD ITEMS TO MENU
         5x starter
         10x main
@@ -18,3 +17,4 @@ Mabey:
 DONE:
     ADD POINT PRICE TO MENU (normal price*2)
     NO. VISTIS TO DB
+    IMPLEMENT FORGOT PASSWORD

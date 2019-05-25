@@ -44,6 +44,14 @@ button{
     cursor: pointer;
 }
 
+a.logout_txt{
+    text-decoration: none;
+}
+
+.logout_button{
+    margin-top: 25px;
+}
+
 .bottom .help_text{
     font-size: 11px;
     color: grey;
