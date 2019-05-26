@@ -156,6 +156,10 @@ nav{
     text-shadow: none;
 }
 
+.open #mobile_nav a{
+    color: white;
+}
+
 .open .nav_item a:hover{
     color: var(--accent-color);
 }
@@ -349,9 +353,13 @@ main{
     color: red;
     padding: 5px 0;
 }
-
 /* 
 TODO: FIXA SNEA KANTER VID BILDERNA
 
 1195px => tablet
 */
+
+@media screen and (max-width: 1185px){
+    .mobile_container{
+    }
+}

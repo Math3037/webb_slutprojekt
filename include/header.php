@@ -45,6 +45,12 @@ foreach($info_row as $row){
             <li class="nav_item"><a href="./book">booking</a></li>
             <li class="nav_item"><a href="./gallery">gallery</a></li>
         </ul>
+        <ul id="mobile_nav">
+            <li class="mobile_nav_item"><a href="<?php echo $_SERVER[''] ?>">home</a></li>
+            <li class="mobile_nav_item"><a href="./menu">menu</a></li>
+            <li class="mobile_nav_item"><a href="./book">booking</a></li>
+            <li class="mobile_nav_item"><a href="./gallery">gallery</a></li>
+        </ul>
     </nav>
     <div id="logo_container">
         <a href="./">

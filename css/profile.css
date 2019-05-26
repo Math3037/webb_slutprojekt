@@ -111,7 +111,7 @@ a.logout_txt{
 .modal .close_btn i{
     font-size: 24px;
     cursor: pointer;
-    color: black;
+    color: var(--accent-color);
 }
 
 .modal .modalContent{
@@ -125,10 +125,6 @@ a.logout_txt{
 
 .modal .modalContent h2{
     color: black;
-}
-
-.modal .close_btn i{
-    color: var(--accent-color);
 }
 
 .helpModal p{
