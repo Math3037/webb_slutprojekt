@@ -1,0 +1,38 @@
+.content{
+    padding-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+form{
+    text-align: center;
+}
+
+input[type=date]{
+    color: black;
+    font-size: 24px;
+    padding: 5px 10px;
+}
+
+input[type=submit]{
+    background: var(--accent-color);
+    border: none;
+    padding: 10px 20px;
+    font-weight: 700;
+    font-size: 1.1em;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 15px;
+}
+
+.valid{
+    width: 200px;
+    word-wrap: break-word;
+    padding-top: 10px;
+}
+
+.disabled{
+    pointer-events: none;
+}

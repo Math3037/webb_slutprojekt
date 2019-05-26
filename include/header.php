@@ -1,6 +1,6 @@
 <?php
 
-include './db.php';
+include  $_SERVER['DOCUMENT_ROOT'] . '/db.php';
 
 $dow = date('N');
 $date = date('Y-m-d');
@@ -40,16 +40,16 @@ foreach($info_row as $row){
 <header>
     <nav>
         <ul id="main_nav">
-            <li class="nav_item"><a href="./">home</a></li>
+            <li class="nav_item"><a href="<?php echo $_SERVER[''] ?>">home</a></li>
             <li class="nav_item"><a href="./menu">menu</a></li>
-            <li class="nav_item"><a href="./booking">booking</a></li>
+            <li class="nav_item"><a href="./book">booking</a></li>
             <li class="nav_item"><a href="./gallery">gallery</a></li>
         </ul>
     </nav>
     <div id="logo_container">
         <a href="./">
-            <img src="./assets/images/logo_long_white.png" alt="Sakana" id="logo">
-            <img src="./assets/images/logo_long.png" alt="Sakana" id="logo_black">
+            <img src="http://localhost/assets/images/logo_long_white.png" alt="Sakana" id="logo">
+            <img src="http://localhost/assets/images/logo_long.png" alt="Sakana" id="logo_black">
         </a>
     </div>
     <div id="right_info">

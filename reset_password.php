@@ -23,12 +23,17 @@ if(!isset($_GET['reset'])){
 
             $query = "UPDATE users SET password='$password' WHERE id=$id";
             $result = mysqli_query($GLOBALS['db'], $query);
-            error_log($query);
+            
+            $tokenId = $row['id'];
+
+            mysqli_query($GLOBALS['db'], "DELETE FROM forgotten WHERE id='$tokenId'");
 
             if($result){
                 header("Location: ./reset_password?reset=successful");
+                exit;
             }else{
                 header("Location: ./reset_password?reset=failed");
+                exit;
             }
         }else{
             header("Location: ./");

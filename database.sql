@@ -98,6 +98,38 @@ INSERT INTO opening_hours(day_value, open_value, close_value) VALUES(6, '18', '0
 INSERT INTO opening_hours(day_value, open_value, close_value) VALUES(7, '16', '23');
 -- #endregion OPENING HOURS
 
+-- #region TIME SLOTS
+INSERT INTO time_slot(`day`, `start`, `end`) VALUES(3, '16:00', '17:30');
+INSERT INTO time_slot(`day`, `start`, `end`) VALUES(3, '17:30', '19:00');
+INSERT INTO time_slot(`day`, `start`, `end`) VALUES(3, '19:00', '20:30');
+INSERT INTO time_slot(`day`, `start`, `end`) VALUES(3, '20:30', '22:00');
+INSERT INTO time_slot(`day`, `start`, `end`) VALUES(3, '22:00', '23:00');
+
+INSERT INTO time_slot(`day`, `start`, `end`) VALUES(4, '16:00', '17:30');
+INSERT INTO time_slot(`day`, `start`, `end`) VALUES(4, '17:30', '19:00');
+INSERT INTO time_slot(`day`, `start`, `end`) VALUES(4, '19:00', '20:30');
+INSERT INTO time_slot(`day`, `start`, `end`) VALUES(4, '20:30', '22:00');
+INSERT INTO time_slot(`day`, `start`, `end`) VALUES(4, '22:00', '23:00');
+
+INSERT INTO time_slot(`day`, `start`, `end`) VALUES(5, '18:00', '19:30');
+INSERT INTO time_slot(`day`, `start`, `end`) VALUES(5, '19:30', '21:00');
+INSERT INTO time_slot(`day`, `start`, `end`) VALUES(5, '21:00', '22:30');
+INSERT INTO time_slot(`day`, `start`, `end`) VALUES(5, '22:30', '00:00');
+INSERT INTO time_slot(`day`, `start`, `end`) VALUES(5, '00:00', '01:00');
+
+INSERT INTO time_slot(`day`, `start`, `end`) VALUES(6, '18:00', '19:30');
+INSERT INTO time_slot(`day`, `start`, `end`) VALUES(6, '19:30', '21:00');
+INSERT INTO time_slot(`day`, `start`, `end`) VALUES(6, '21:00', '22:30');
+INSERT INTO time_slot(`day`, `start`, `end`) VALUES(6, '22:30', '00:00');
+INSERT INTO time_slot(`day`, `start`, `end`) VALUES(6, '00:00', '01:00');
+
+INSERT INTO time_slot(`day`, `start`, `end`) VALUES(7, '16:00', '17:30');
+INSERT INTO time_slot(`day`, `start`, `end`) VALUES(7, '17:30', '19:00');
+INSERT INTO time_slot(`day`, `start`, `end`) VALUES(7, '19:00', '20:30');
+INSERT INTO time_slot(`day`, `start`, `end`) VALUES(7, '20:30', '22:00');
+INSERT INTO time_slot(`day`, `start`, `end`) VALUES(7, '22:00', '23:00');
+-- #endregion TIME SLOTS
+
 -- #region TABLES
 INSERT INTO dinner_table(seats) VALUES(2); -- TABLE 1
 INSERT INTO dinner_table(seats) VALUES(2); -- TABLE 2
