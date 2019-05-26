@@ -112,6 +112,47 @@ INSERT INTO dinner_table(seats) VALUES(8); -- TABLE 8
 INSERT INTO dinner_table(seats) VALUES(8); -- TABLE 9
 -- #endregion TABLES
 
+-- #region MENU ITEMS
+INSERT INTO menu_items(`category`, `name`, `desc`, `price`) VALUES('starter', 'Shrimp Dumplings', 'Black tiger shrimp, sambal soy sauce', 25);
+INSERT INTO menu_items(`category`, `name`, `desc`, `price`) VALUES('starter', 'Pan Seared Crab Cakes', 'Pico de gallo, lemon, cracked pepper aioli', 25);
+INSERT INTO menu_items(`category`, `name`, `desc`, `price`) VALUES('starter', 'Gyu Tataki', 'Thin slices of seared beef fillet in ponzu sauce', 50);
+INSERT INTO menu_items(`category`, `name`, `desc`, `price`) VALUES('starter', 'Age Dashi Dofu', 'Deep fried bean curd with tempura sauce', 30);
+INSERT INTO menu_items(`category`, `name`, `desc`, `price`) VALUES('starter', 'Hijiki', 'Hijiki seaweed cooked with soy sauce and mirin', 15);
+
+INSERT INTO menu_items(`category`, `name`, `desc`, `price`) VALUES('main', 'Sushi 6 pieces', 'Create your own mix from the following sushi rolls: salmon, shrimp tempura, avocado, serrano cucumber, unagi sauce', 100);
+INSERT INTO menu_items(`category`, `name`, `desc`, `price`) VALUES('main', 'Sushi 8 pieces', 'Create your own mix from the following sushi rolls: salmon, shrimp tempura, avocado, serrano cucumber, unagi sauce', 110);
+INSERT INTO menu_items(`category`, `name`, `desc`, `price`) VALUES('main', 'Sushi 10 pieces', 'Create your own mix from the following sushi rolls: salmon, shrimp tempura, avocado, serrano cucumber, unagi sauce', 120);
+INSERT INTO menu_items(`category`, `name`, `desc`, `price`) VALUES('main', 'Sushi 12 pieces', 'Create your own mix from the following sushi rolls: salmon, shrimp tempura, avocado, serrano cucumber, unagi sauce', 130);
+
+INSERT INTO menu_items(`category`, `name`, `desc`, `price`, `strength`) VALUES('main', 'Roasted Salmon', 'Pan roasted salmon, sautéed fresno chile, gai lan, shimeji & shiitake mushrooms, kaffirlime leaf, sweet miso, pea shoots', 320, 2);
+INSERT INTO menu_items(`category`, `name`, `desc`, `price`) VALUES('main', 'Koshu Braised Wagyu Short Ribs', 'Slow braised boneless ribs served with truffle polenta & glazed carrots', 200);
+INSERT INTO menu_items(`category`, `name`, `desc`, `price`) VALUES('main', 'Long-Bone Ribeye', '32oz ginger garlic marinated long-bone ribeye, yuzu koshu butter', 120);
+INSERT INTO menu_items(`category`, `name`, `desc`, `price`, `strength`) VALUES('main', 'Filet Mignon', '8 oz filet, pea shoots, red wine reduction, sriracha sesame aioli', 120, 4);
+INSERT INTO menu_items(`category`, `name`, `desc`, `price`) VALUES('main', 'Beeler Farms Belly-On Pork Handle', 'Smoked & grilled to medium, yama-hog sauce', 120);
+INSERT INTO menu_items(`category`, `name`, `desc`, `price`, `strength`) VALUES('main', 'Wagyu Burger', '200g Japanese wagyu beef, applewood smoked bacon, beemster cheese, beefsteak tomato, Japanese dijon, brioche bun, furikake fries',120, 3);
+
+INSERT INTO menu_items(`category`, `name`, `desc`, `price`) VALUES('drinks', 'Soda', 'Choose between: coca-cola, coca-cola zero, fanta, sprite', 30);
+
+INSERT INTO menu_items(`category`, `name`, `desc`, `price`) VALUES('drinks', 'Wines', 'divider', 0);
+INSERT INTO menu_items(`category`, `name`, `desc`, `price`) VALUES('drinks', 'Ile Four Yuzu', 'Fruity, sweet, very sour taste with a clear character of yuzu, hints of herbs and lemon', 60);
+INSERT INTO menu_items(`category`, `name`, `desc`, `price`) VALUES('drinks', 'Umepon', 'Fruity, sweet taste with hints of mandarin, almond paste, yellow plums, honey and grapefruit shell', 75);
+
+INSERT INTO menu_items(`category`, `name`, `desc`, `price`) VALUES('drinks', 'Sake', 'divider', 0);
+INSERT INTO menu_items(`category`, `name`, `desc`, `price`) VALUES('drinks', 'Junmai Ginjo Shu', 'Floral taste with sweetness, hints of honey melon, green banana, mineral, almond and citrus', 75);
+INSERT INTO menu_items(`category`, `name`, `desc`, `price`) VALUES('drinks', 'Matsukura', 'Elegant taste with sweetness, elements of pears, almonds, minerals and jasmine', 75);
+
+INSERT INTO menu_items(`category`, `name`, `desc`, `price`) VALUES('drinks', 'Beers', 'divider', 0);
+INSERT INTO menu_items(`category`, `name`, `desc`, `price`) VALUES('drinks', 'Wheat King Wit', 'Spicy flavor with hints of light bread, honey, coriander seeds, apricot and orange', 60);
+INSERT INTO menu_items(`category`, `name`, `desc`, `price`) VALUES('drinks', 'Yuzu Saison', 'Fruity, slightly sour taste with hints of grapefruit, mandarin, nectarine and lemon balm', 80);
+
+INSERT INTO menu_items(`category`, `name`, `desc`, `price`) VALUES('desserts', 'Banana Spring Rolls', 'Caramelized banana, filo, caramel sauce', 50);
+INSERT INTO menu_items(`category`, `name`, `desc`, `price`) VALUES('desserts', 'Chocolate Fondant', '', 50);
+INSERT INTO menu_items(`category`, `name`, `desc`, `price`) VALUES('desserts', 'Vanilla ice cream', '2 scoops vanilla ice cream topped with chocolate sauce and strawberries', 35);
+INSERT INTO menu_items(`category`, `name`, `desc`, `price`) VALUES('desserts', 'Fortune cookie', '', 10);
+INSERT INTO menu_items(`category`, `name`, `desc`, `price`) VALUES('desserts', 'Cappuccino', '', 20);
+INSERT INTO menu_items(`category`, `name`, `desc`, `price`) VALUES('desserts', 'Jasmine Flower Tea', '', 20);
+-- #endregion MENU ITEMS
+
 
 -- USERNAME: admin@sakana.se
 -- PASSWORD: admin

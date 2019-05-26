@@ -50,3 +50,14 @@ main h1{
 .menu_item_right{
     text-align: right;
 }
+
+.menu_item_left {
+    max-width: 80%;
+}
+
+.divider{
+    font-size: 24px;
+    font-weight: 700;
+    border-bottom: 1px solid var(--accent-color);
+    padding: 20px 0 5px 0;
+}

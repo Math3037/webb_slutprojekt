@@ -4,28 +4,28 @@
     require './db.php';
 
     function getStarters(){
-        $sql = 'SELECT * FROM menu_items WHERE category="starter" ORDER BY position';
+        $sql = 'SELECT * FROM menu_items WHERE category="starter"';
         $result = mysqli_query($GLOBALS['db'], $sql);
 
         return $result;
     };
 
     function getMainCourses(){
-        $sql = 'SELECT * FROM menu_items WHERE category="main" ORDER BY position';
+        $sql = 'SELECT * FROM menu_items WHERE category="main"';
         $result = mysqli_query($GLOBALS['db'], $sql);
 
         return $result;
     };
 
     function getDrinks(){
-        $sql = 'SELECT * FROM menu_items WHERE category="drinks" ORDER BY position';
+        $sql = 'SELECT * FROM menu_items WHERE category="drinks"';
         $result = mysqli_query($GLOBALS['db'], $sql);
 
         return $result;
     };
 
     function getDesserts(){
-        $sql = 'SELECT * FROM menu_items WHERE category="desserts" ORDER BY position';
+        $sql = 'SELECT * FROM menu_items WHERE category="desserts"';
         $result = mysqli_query($GLOBALS['db'], $sql);
 
         return $result;
@@ -76,7 +76,7 @@
                         <div class="menu_item_desc"><?php echo $row['desc']; ?></div>
                     </div>
                     <div class="menu_item_right">
-                        <div class="menu_item_price"><?php echo $row['price']; ?>kr</div>
+                        <div class="menu_item_price"><?php echo $row['price']; ?>kr / <?php echo ceil(($row['price'] * 2) / 5) * 5; ?>P</div>
                         <div class="menu_item_meta">
                             <?php for($x=0; $x<$row['strength']; $x++){ ?>
                                 <i class="fas fa-pepper-hot"></i>
@@ -90,22 +90,29 @@
                 $drinks = getDrinks();
 
                 while($row = mysqli_fetch_assoc($drinks)){
-            ?>
-                <li class="menu_list_item">
-                    <div class="menu_item_left">
-                        <div class="menu_item_title"><?php echo $row['name']; ?></div>
-                        <div class="menu_item_desc"><?php echo $row['desc']; ?></div>
-                    </div>
-                    <div class="menu_item_right">
-                        <div class="menu_item_price"><?php echo $row['price']; ?>kr</div>
-                        <div class="menu_item_meta">
-                            <?php for($x=0; $x<$row['strength']; $x++){ ?>
-                                <i class="fas fa-pepper-hot"></i>
-                            <?php } ?>
-                        </div>
-                    </div>
-                </li>
-            <?php } ?>
+                    if($row['desc'] == "divider"){
+                        ?>
+                            <div class="divider"><?php echo $row['name']; ?></div>
+                        <?php
+                    }else{
+                    ?>
+                        <li class="menu_list_item">
+                            <div class="menu_item_left">
+                                <div class="menu_item_title"><?php echo $row['name']; ?></div>
+                                <div class="menu_item_desc"><?php echo $row['desc']; ?></div>
+                            </div>
+                            <div class="menu_item_right">
+                                <div class="menu_item_price"><?php echo $row['price']; ?>kr / <?php echo ceil(($row['price'] * 2) / 5) * 5; ?>P</div>
+                                <div class="menu_item_meta">
+                                    <?php for($x=0; $x<$row['strength']; $x++){ ?>
+                                        <i class="fas fa-pepper-hot"></i>
+                                    <?php } ?>
+                                </div>
+                            </div>
+                        </li>
+                    <?php 
+                    }
+                } ?>
             <li class="menu_list_category">DESSERTS</li>
             <?php
                 $desserts = getDesserts();
@@ -118,7 +125,7 @@
                         <div class="menu_item_desc"><?php echo $row['desc']; ?></div>
                     </div>
                     <div class="menu_item_right">
-                        <div class="menu_item_price"><?php echo $row['price']; ?>kr</div>
+                        <div class="menu_item_price"><?php echo $row['price']; ?>kr / <?php echo ceil(($row['price'] * 2) / 5) * 5; ?>P</div>
                         <div class="menu_item_meta">
                             <?php for($x=0; $x<$row['strength']; $x++){ ?>
                                 <i class="fas fa-pepper-hot"></i>

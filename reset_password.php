@@ -1,5 +1,6 @@
 <?php
 
+require './config.php';
 require './db.php';
 
 if(!isset($_GET['reset'])){
@@ -68,7 +69,7 @@ if(!isset($_GET['reset'])){
 <head>
     <?php include './include/head.php'; ?>
     <link rel="stylesheet" href="./css/reset_password.css">
-    <title>Document</title>
+    <title><?php echo NAME; ?> | Reset password</title>
 </head>
 <body>
     <?php include './include/header.php'; ?>
