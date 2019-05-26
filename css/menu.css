@@ -7,7 +7,7 @@ main h1{
     padding-bottom: 50px;
 }
 
-#menu_list{
+.menu_list{
     width: 50%;
     margin: 0 auto;
 }
@@ -43,7 +43,7 @@ main h1{
     text-transform: uppercase;
 }
 
-.menu_list_category:first-of-type{
+.menu_list_first{
     padding-top: 0;
 }
 
@@ -61,3 +61,113 @@ main h1{
     border-bottom: 1px solid var(--accent-color);
     padding: 20px 0 5px 0;
 }
+
+.searchBtn button{
+    background: var(--accent-color);
+    border: none;
+    padding: 10px 20px;
+    font-weight: 700;
+    font-size: 1.1em;
+    cursor: pointer;
+}
+
+.searchBtn button i{
+    padding: 0 10px 0 0;
+}
+
+/* #region MODAL */
+
+.modal{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0, 0.8);
+    z-index: 999999;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .2s ease-in-out;
+}
+
+.modal .box{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 800px;
+    height: 450px;
+    background: white;
+    margin-top: -245px;
+    margin-left: -420px;
+    transition: margin .2s ease-in-out;
+}
+
+.modal .close_btn{
+    position: absolute;
+    left: 100%;
+    bottom: 100%;
+    margin-left: -25px;
+    margin-bottom: -30px;
+    height: 24px;
+    width: 24px;
+}
+
+.modal .close_btn i{
+    font-size: 24px;
+    cursor: pointer;
+    color: black;
+}
+
+.modal .modalContent{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    color: black;
+}
+
+.modal .close_btn i{
+    color: var(--accent-color);
+}
+
+.modal_open{
+    opacity: 1;
+    pointer-events: all;
+}
+
+.modal_open .box{
+    margin-top: -225px;
+}
+
+.searchModal .modalContent{
+    padding: 40px 0 0 0;
+}
+
+#search_input{
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid var(--accent-color);
+    font-size: 31px;
+    font-weight: 700;
+    color: black;
+}
+
+#search_menu_list *{
+    color: black;
+}
+
+#search_menu_list{
+    width: 90%;
+}
+
+.searchResult{
+    width: 100%;
+}
+
+.cat{
+    font-size: 12px;
+    color: #333;
+}
+
+/* #endregion MODAL */

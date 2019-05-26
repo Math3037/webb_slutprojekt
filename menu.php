@@ -42,8 +42,13 @@
     <?php include './include/header.php'; ?>
     <main id="content">
         <h1>OUR MENU</h1>
-        <ul id="menu_list">
-            <li class="menu_list_category">STARTERS</li>
+        <ul class="menu_list">
+            <li class="menu_list_item">
+                <div class="searchBtn">
+                    <button onClick="toggleModal('.searchModal');"><i class="fas fa-search"></i>Search</button>
+                </div>
+            </li>
+            <li class="menu_list_category menu_list_first">STARTERS</li>
             <?php
                 $starters = getStarters();
 
@@ -137,7 +142,21 @@
         </ul>
     </main>
     <?php include './include/footer.php'; ?>
+    <div class="searchModal modal">
+        <div class="box">
+            <div class="close_btn" onclick="toggleModal('.searchModal')"><i class="fas fa-times"></i></div>
+            <div class="modalContent">
+                <div class="searchForm">
+                    <input type="text" name="q" id="search_input" placeholder="Search">
+                </div>
+                <div class="searchResult">
+                    <ul class="menu_list" id="search_menu_list"></ul>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="./js/menu.js"></script>
 <script src="./js/index.js"></script>
 </html>
