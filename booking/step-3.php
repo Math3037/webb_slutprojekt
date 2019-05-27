@@ -60,11 +60,11 @@ if(isset($_POST['type']) && isset($_POST['table']) && isset($_POST['time'])){
             }else if($_POST['type'] == 'user'){
                 ?>
                     <div class="info_container">
-                        <div class="name"><b>Name: </b><?php echo $_POST['name']; ?></div>
-                        <div class="phone"><b>Phone number: </b><?php echo $_POST['phone']; ?></div>
+                        <div class="table"><b>Table: </b>Table <?php echo $table['id']; ?> - <?php echo $table['seats']; ?> seats</div>
+                        <div class="time"><b>Time: </b><?php echo $time['start'] . ' - ' . $time['end']; ?></div>
                     </div>
                     <form action="../post/book_table" method="post">
-                        <input type="hidden" name="type" value="input">
+                        <input type="hidden" name="type" value="user">
                         <input type="hidden" name="table" value="<?php echo $_POST['table']; ?>">
                         <input type="hidden" name="time" value="<?php echo $_POST['time']; ?>">
                         <input type="submit" value="Confirm">

@@ -1,3 +1,6 @@
+function toggleMenu(){
+  $('.mobile_nav_relative').toggleClass('mobile_nav_open');
+}
 
 //Lägger till och tar bort 'open' klassen från headern när man scrollar ner
 window.onscroll = function(){

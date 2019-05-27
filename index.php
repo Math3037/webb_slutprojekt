@@ -26,7 +26,8 @@
     <main id="content">
         <article class="section one">
             <div class="inner-image">
-                <img src="https://dummyimage.com/400x250/333/aaa" />
+                <!-- TODO: Lägg till alt. -->
+                <img src="./assets/images/article_1.jpg" width="400px" />
             </div>
             <div class="inner-text">
                 <p>
@@ -37,7 +38,7 @@
         <article class="section image fp1"></article>
         <article class="section two">
             <div class="inner-image">
-                <img src="https://dummyimage.com/400x250/333/aaa" />
+                <img src="./assets/images/article_2.png" width="400px" />
             </div>
             <div class="inner-text">
                 <p>
@@ -48,7 +49,7 @@
         <article class="section image fp2"></article>
         <article class="section one">
             <div class="inner-image">
-                <img src="https://dummyimage.com/400x250/333/aaa" />
+                <img src="./assets/images/article_3.jpg" width="400px" />
             </div>
             <div class="inner-text">
                 <p>

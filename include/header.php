@@ -37,6 +37,7 @@ foreach($info_row as $row){
 }
 
 ?>
+<link rel="stylesheet" href="./css/header.css">
 <header>
     <nav>
         <ul id="main_nav">
@@ -45,17 +46,27 @@ foreach($info_row as $row){
             <li class="nav_item"><a href="./book">booking</a></li>
             <li class="nav_item"><a href="./gallery">gallery</a></li>
         </ul>
-        <ul id="mobile_nav">
-            <li class="mobile_nav_item"><a href="<?php echo $_SERVER[''] ?>">home</a></li>
-            <li class="mobile_nav_item"><a href="./menu">menu</a></li>
-            <li class="mobile_nav_item"><a href="./book">booking</a></li>
-            <li class="mobile_nav_item"><a href="./gallery">gallery</a></li>
-        </ul>
+        <div class="mobile_nav_container">
+            <div class="hamburger" onclick="toggleMenu();">
+                <div class="bar-1"></div>
+                <div class="bar-2"></div>
+                <div class="bar-3"></div>
+            </div>
+            <div class="mobile_nav_relative">
+                <div class="close_btn" onclick="toggleMenu();"><i class="fas fa-times"></i></div>
+                <ul id="mobile_nav">
+                    <li class="mobile_nav_item"><a href="<?php echo $_SERVER[''] ?>">home</a></li>
+                    <li class="mobile_nav_item"><a href="./menu">menu</a></li>
+                    <li class="mobile_nav_item"><a href="./book">booking</a></li>
+                    <li class="mobile_nav_item"><a href="./gallery">gallery</a></li>
+                </ul>
+            </div>
+        </div>
     </nav>
     <div id="logo_container">
         <a href="./">
-            <img src="http://localhost/assets/images/logo_long_white.png" alt="Sakana" id="logo">
-            <img src="http://localhost/assets/images/logo_long.png" alt="Sakana" id="logo_black">
+            <img src="http://localhost:8080/assets/images/logo_white.png" alt="Sakana" id="logo">
+            <img src="http://localhost:8080/assets/images/logo.png" alt="Sakana" id="logo_black">
         </a>
     </div>
     <div id="right_info">

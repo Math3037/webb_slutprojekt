@@ -195,3 +195,16 @@ input[type=number] {
 }
 
 /* #endregion PROFILE INFO */
+
+@media screen and (max-width: 475px){
+    .box{
+        width: 90% !important;
+        margin-left: -45% !important;  
+    }
+}
+
+@media screen and (max-width: 360px){
+    .profile{
+        width: 90% !important;
+    }
+}

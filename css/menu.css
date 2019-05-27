@@ -1,3 +1,4 @@
+/* #region MAIN */
 main{
     padding-top: 50px;
 }
@@ -7,6 +8,7 @@ main h1{
     padding-bottom: 50px;
 }
 
+/* #region MENU */
 .menu_list{
     width: 50%;
     margin: 0 auto;
@@ -61,7 +63,9 @@ main h1{
     border-bottom: 1px solid var(--accent-color);
     padding: 20px 0 5px 0;
 }
+/* #endregion MENU */
 
+/* #region SEARCH */
 .searchBtn button{
     background: var(--accent-color);
     border: none;
@@ -74,6 +78,8 @@ main h1{
 .searchBtn button i{
     padding: 0 10px 0 0;
 }
+/* #endregion SEARCH */
+/* #endregion MAIN*/
 
 /* #region MODAL */
 
@@ -163,11 +169,34 @@ main h1{
 
 .searchResult{
     width: 100%;
+    overflow-y: scroll;
 }
 
 .cat{
     font-size: 12px;
     color: #333;
 }
-
 /* #endregion MODAL */
+
+@media screen and (max-width: 775px){
+    .menu_list{
+        width: 90% !important;
+    }
+}
+
+@media screen and (max-width: 1000px){
+    .box{
+        width: 90% !important;
+        margin-left: -45% !important;
+    }
+}
+
+@media screen and (max-width: 480px){
+    .searchForm{
+        width: 90% !important;
+    }
+
+    #search_input{
+        width: 100% !important;
+    }
+}

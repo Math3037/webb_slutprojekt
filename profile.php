@@ -118,10 +118,6 @@
                             <button type="submit" name="submit">Update</button>
                         </div>
                     </form>
-
-                    <div class="profile_info_title"><h3>Bookings</h3></div>
-                    <!-- ALL BOOKINGS UPCOMMING AND PAST, REMOVE UPCOMMING -->
-                    <!--<form action="./post/update_booking" method="post"></form>-->
                     <a href="./logout" class="logout_txt"><button class="logout_button">Logout</button></a>
                 </div>
             </div>

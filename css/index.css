@@ -1,4 +1,4 @@
-/* GLOBAL */
+/* #region GLOBAL */
 :root{
    --accent-color: #ED1C24; 
 }
@@ -9,11 +9,13 @@
     color: white;
 }
 
+/* Ändrar i firefox */
 ::-moz-selection{
-    background: var(--accent-color); /* Ändrar i firefox */
+    background: var(--accent-color);
     color: white;
 }
 
+/* Ta bort all margin och padding samt gör all text vit då bakgrunden är svart */
 *{
     margin: 0;
     padding: 0;
@@ -29,162 +31,16 @@ body,html{
     width: 100%;
     height: 100%;
 }
+/* #endregion GLOBAL */
 
+/* #region HERO*/
+
+/* Gör så att den stora bilden på första sidan alltid täcker hela skärmen */
 .hero{
     width: 100%;
     height: 100%;
 }
 
-/* HEADER */
-header{
-    width: 100%;
-    height: 40px;
-    background: transparent;
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: space-between;
-    align-items: center;
-    transition: .3s ease-in-out all;
-    position: fixed;
-    z-index: 9999; /* Får headern att hamna över bilderna i 'article' */
-}
-
-header > *{
-    width: 33.333333333333%;
-}
-
-/* #region NAV */
-nav{
-
-}
-
-#main_nav{
-    list-style: none;
-}
-
-.nav_item{
-    display: inline-block;
-    padding-left: 15px;
-}
-
-.nav_item a{
-    text-transform: uppercase;
-    text-decoration: none;
-    color: white;
-    margin: 10px;
-    transition: .3s; /* Få färgen att bytas mjukt */
-    font-weight: 700;
-    text-shadow: 1px 1px 0px rgba(0,0,0,0.59);
-}
-
-.nav_item a:hover{
-    color: var(--accent-color); /* Bli till accent färgen när man hoverar över länken */
-}
-
-/* #endregion NAV */
-
-/* #region LOGO */
-#logo_container{
-    height: 70px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-#logo, #logo_black{
-    height: 25px;
-    transition: .1s;
-}
-
-#logo_black{
-    display: none;
-}
-
-#logo{
-    display: block;
-}
-
-/* #endregion LOGO */
-
-/* #region RIGHT NAV */
-#right_info{
-    display: flex;
-    justify-content: right;
-    align-items: center;
-}
-
-#opening_hours{
-    padding-right: 20px;
-}
-
-#opening_hours > b{
-    color: white
-}
-
-#opening_hours{
-    color: white;
-}
-
-.login{
-    padding-right: 15px;
-    font-size: 21px;
-    position: relative;
-}
-
-.login i{
-    cursor: pointer;
-}
-
-/* #endregion RIGHT NAV */
-
-/* HEADER OPEN (när man scrollat ner lite) */
-.open{
-    height: 70px;
-    background: white;
-}
-
-.open #opening_hours > b{
-    color: black
-}
-
-.open #opening_hours{
-    color: black;
-}
-
-.open .nav_item a{
-    color: black;
-    text-shadow: none;
-}
-
-.open #mobile_nav a{
-    color: white;
-}
-
-.open .nav_item a:hover{
-    color: var(--accent-color);
-}
-
-.open #logo{
-    height: 35px;
-}
-
-.open #logo_black{
-    display: block;
-}
-
-.open #logo{
-    display: none;
-}
-
-.open .login_open{
-    border: 1px solid #333;
-}
-
-.open .login i{
-    color: black;
-}
-
-/* MAIN CONTENT FULL IMAGE */
 .full_bg{
     background-image: url('../assets/images/first_page_full.jpg');
     width: 100%;
@@ -218,14 +74,16 @@ nav{
 .full_bg i{
     width: 20px;
 }
+/* #endregion HERO */
 
-/* FOOTER */
+/* #region FOOTER */
 footer{
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    border-top: 1px solid white;
 }
 
 #copyright{
@@ -272,13 +130,14 @@ footer{
 /* KARTAN. Från https://www.embedgooglemap.net */
 .mapouter{position:relative;text-align:right;height:250px;width:350px;}
 .gmap_canvas {overflow:hidden;background:none!important;height:250px;width:350px;}
+/* #enregion FOOTER */
 
 /* MAIN CONTENT */
 main{
     width: 100%;
 }
 
-/* Article */
+/* #region ARTICLES */
 .section{
     width: 100%;
     height: 250px;
@@ -286,25 +145,14 @@ main{
     display: flex;
 }
 
-
-/* clip path ger "backen" vid bilderna */
-/*.one img{
-    -webkit-clip-path: polygon(0 0, 100% 0, 70% 100%, 48% 100%, 0 100%);
-    clip-path: polygon(0 0, 100% 0, 70% 100%, 48% 100%, 0 100%);
-}
-
-.two img{
-    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 48% 100%, 20% 100%);
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 48% 100%, 20% 100%);
-}*/
-
 .inner-image{
     width: 400px;
     background: black;
+    overflow: hidden;
 }
 
 .inner-text{
-    width: calc(100% - 350px);
+    width: calc(100% - 350px); /* Gör text delen av "artiklarna" tillräckligt stora för att få plats brevid bilden. 100% - bildens bredd. */
     background: black;
     display: flex;
     justify-content: center;
@@ -326,11 +174,14 @@ main{
 .two .inner-image{ order: 2; }
 .two .inner-text{ order: 1; }
 
+/* #endregion ARTICLES */
+
+/* #region FP IMAGES */
 /* Front page images */
 .image{
     height: 500px;
 
-    /* Parallax */
+    /* Skapa parallax effekt */
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -353,13 +204,45 @@ main{
     color: red;
     padding: 5px 0;
 }
-/* 
-TODO: FIXA SNEA KANTER VID BILDERNA
+/* #endregion FP IMAGES */
 
-1195px => tablet
-*/
-
+/* #region TABLET*/
+/* 1195px => tablet */
 @media screen and (max-width: 1185px){
-    .mobile_container{
+    .inner-image{
+        display: none;
+    }
+
+    .inner-text{
+        width: 100%;
+    }
+
+    .inner-text p{
+        width: 100%;
+    }
+
+    main article:not(.image){
+        height: auto !important;
     }
 }
+
+@media screen and (max-width: 1000px){
+    .footer_flex{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .footer_opening_hours{
+        width: 100%;
+    }
+
+    .footer_flex section{
+        margin: 20px 0;
+    }
+}
+/* #endregion TABLET*/
+
+/* #region MOBILE */
+
+/* #endregion MOBILE */
