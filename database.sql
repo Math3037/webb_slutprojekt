@@ -48,7 +48,7 @@ CREATE TABLE opening_hours(
     `day_value` INT(1) NOT NULL,
     `open_value` VARCHAR(8) NOT NULL,
     `close_value` VARCHAR(8) NOT NULL,
-    `closed` INT(1) NOT NULL
+    `closed` INT(1) NOT NULL DEFAULT 0
 );
 
 CREATE TABLE abnormal_opening_hours(
@@ -56,7 +56,7 @@ CREATE TABLE abnormal_opening_hours(
     `date_value` DATE NOT NULL,
     `open_value` VARCHAR(8) NOT NULL,
     `close_value` VARCHAR(8) NOT NULL,
-    `closed` INT(1) NOT NULL
+    `closed` INT(1) NOT NULL DEFAULT 0
 );
 
 -- TABLE BOOKINGS

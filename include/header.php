@@ -65,8 +65,8 @@ foreach($info_row as $row){
     </nav>
     <div id="logo_container">
         <a href="./">
-            <img src="http://localhost:8080/assets/images/logo_white.png" alt="Sakana" id="logo">
-            <img src="http://localhost:8080/assets/images/logo.png" alt="Sakana" id="logo_black">
+            <img src="http://thsa.kronhus.tk/assets/images/logo_white.png" alt="Sakana" id="logo">
+            <img src="http://thsa.kronhus.tk/assets/images/logo.png" alt="Sakana" id="logo_black">
         </a>
     </div>
     <div id="right_info">

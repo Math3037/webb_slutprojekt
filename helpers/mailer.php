@@ -3,9 +3,9 @@
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
-require $_SERVER['DOCUMENT_ROOT'] . '/lib/PHPMailer/Exception.php';
-require $_SERVER['DOCUMENT_ROOT'] . '/lib/PHPMailer/PHPMailer.php';
-require $_SERVER['DOCUMENT_ROOT'] . '/lib/PHPMailer/SMTP.php';
+require $_SERVER['DOCUMENT_ROOT'] . '/libraries/PHPMailer/Exception.php';
+require $_SERVER['DOCUMENT_ROOT'] . '/libraries/PHPMailer/PHPMailer.php';
+require $_SERVER['DOCUMENT_ROOT'] . '/libraries/PHPMailer/SMTP.php';
 
 session_start();
 

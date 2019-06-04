@@ -7,7 +7,6 @@
 <html lang="en">
 <head>
     <title><?php echo NAME; ?></title>
-    <link rel="stylesheet" href="./css/index.css">
     <?php include './include/head.php'; ?>
 </head>
 <body>
@@ -27,22 +26,22 @@
         <article class="section one">
             <div class="inner-image">
                 <!-- TODO: Lägg till alt. -->
-                <img src="./assets/images/article_1.jpg" width="400px" />
+                <img src="./assets/images/article_1.png" width="400px" />
             </div>
             <div class="inner-text">
                 <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut congue quam id odio vulputate, sit amet rutrum quam fringilla. Cras libero ipsum, maximus et gravida non, vulputate eget erat. Nulla ac dolor sit amet augue fringilla mattis. Aenean pharetra, mi ac dictum elementum, tortor lorem eleifend felis, in faucibus libero libero vitae libero. Nam mollis interdum arcu vitae efficitur. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed eros nibh, aliquet ac accumsan eu, tempus at tortor. Cras tincidunt, enim at elementum mattis, dui justo ullamcorper massa
+                    At Sakana we offer high quality new and traditional Japanese dishes, everything from sushi to hamburgers. Complient with wines handpicked by our chefs and imported from Japan.
                 </p>
             </div>
         </article>
         <article class="section image fp1"></article>
         <article class="section two">
             <div class="inner-image">
-                <img src="./assets/images/article_2.png" width="400px" />
+                <img src="./assets/images/article_2.jpg" width="400px" />
             </div>
             <div class="inner-text">
                 <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut congue quam id odio vulputate, sit amet rutrum quam fringilla. Cras libero ipsum, maximus et gravida non, vulputate eget erat. Nulla ac dolor sit amet augue fringilla mattis. Aenean pharetra, mi ac dictum elementum, tortor lorem eleifend felis, in faucibus libero libero vitae libero. Nam mollis interdum arcu vitae efficitur. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed eros nibh, aliquet ac accumsan eu, tempus at tortor. Cras tincidunt, enim at elementum mattis, dui justo ullamcorper massa
+                    Our chefs handpicks fish, vegitables and other fresh products every morning to bring you the highest quality food.
                 </p>
             </div>
         </article>
@@ -53,7 +52,7 @@
             </div>
             <div class="inner-text">
                 <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut congue quam id odio vulputate, sit amet rutrum quam fringilla. Cras libero ipsum, maximus et gravida non, vulputate eget erat. Nulla ac dolor sit amet augue fringilla mattis. Aenean pharetra, mi ac dictum elementum, tortor lorem eleifend felis, in faucibus libero libero vitae libero. Nam mollis interdum arcu vitae efficitur. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed eros nibh, aliquet ac accumsan eu, tempus at tortor. Cras tincidunt, enim at elementum mattis, dui justo ullamcorper massa
+                    Sakana is located in the heart of Gothenburg with booming nightlife and lots of transportation options.
                 </p>
             </div>
         </article>
