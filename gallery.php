@@ -1,11 +1,13 @@
 <?php
     include 'config.php';
+    include_once 'libraries\ImgCompressor.class.php';
     
     //require 'db.php';
 
-    $dir = './assets/images/gallery';
+    $dir = './assets/images/gallery_compressed';
 
     $getGalleryImages = function() use ($dir){
+
         $files = scandir($dir);
         array_splice($files, 0, 2);
 

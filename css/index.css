@@ -204,7 +204,7 @@ main{
 .cookie_box{
     position: fixed;
     bottom: 0;
-    background: #333;
+    background: #111;
     width: 100%;
     padding: 10px;
     text-align: center;
