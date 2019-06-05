@@ -1,0 +1,31 @@
+.gallery_box{
+    text-align: center; /* Sätter allt i center, margin: 0 auto; fungerade inte, flex gör så att bilderna hamnar konstigt */
+    column-count: 4;
+    column-gap: 30px;
+    padding-top: 50px;
+    margin: 0 20px;
+}
+
+.gallery_image{
+    width: 400px;
+    padding: 20px 0;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 1680px){
+    .gallery_box{
+        column-count: 3;
+    }
+}
+
+@media screen and (max-width: 1270px){
+    .gallery_box{
+        column-count: 2;
+    }
+}
+
+@media screen and (max-width: 850px){
+    .gallery_box{
+        column-count: 1;
+    }
+}
