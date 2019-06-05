@@ -31,7 +31,7 @@
         </section>
     </div>
     <div class="socials">
-        <img src="./assets/images/socials.png" usemap="#image-map">
+        <img src="./assets/images/socials.png" alt="Instagram: @sakana Facebook: Sakana" usemap="#image-map">
         <map name="image-map">
             <area target="_blank" alt="Instagram" title="Instagram" href="https://instagram.com/sakana" coords="12,1,57,44" shape="rect">
             <area target="_blank" alt="Facebook" title="Facebook" href="https://facebook.com/Sakana" coords="68,0,107,44" shape="rect">

@@ -26,7 +26,7 @@
         <article class="section one">
             <div class="inner-image">
                 <!-- TODO: Lägg till alt. -->
-                <img src="./assets/images/article_1.png" width="400px" />
+                <img src="./assets/images/article_1.png" width="400px" alt="Restaurant enviroment" />
             </div>
             <div class="inner-text">
                 <p>
@@ -37,7 +37,7 @@
         <article class="section image fp1"></article>
         <article class="section two">
             <div class="inner-image">
-                <img src="./assets/images/article_2.jpg" width="400px" />
+                <img src="./assets/images/article_2.jpg" width="400px" alt="Fish market" />
             </div>
             <div class="inner-text">
                 <p>
@@ -48,7 +48,7 @@
         <article class="section image fp2"></article>
         <article class="section one">
             <div class="inner-image">
-                <img src="./assets/images/article_3.jpg" width="400px" />
+                <img src="./assets/images/article_3.jpg" width="400px" alt="Avenyn, Gothenburg" />
             </div>
             <div class="inner-text">
                 <p>
