@@ -35,7 +35,7 @@
 <html lang="en">
 <head>
     <?php include './include/head.php'; ?>
-    <title><?php echo NAME; ?> | MENU</title>
+    <title><?=NAME?> | MENU</title>
     <link rel="stylesheet" href="./css/menu.css">
 </head>
 <body>

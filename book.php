@@ -6,7 +6,7 @@
 <head>
     <?php include './include/head.php'; ?>
     <link rel="stylesheet" href="./css/booking.css">
-    <title><?php echo NAME; ?> | Booking</title>
+    <title><?=NAME?> | Booking</title>
 </head>
 <body>
     <?php include './include/header.php'; ?>

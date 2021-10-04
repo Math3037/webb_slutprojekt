@@ -51,7 +51,7 @@ if(isset($_POST['submit'])){
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title><?php echo NAME; ?> | LOGIN</title>
+    <title><?=NAME?> | LOGIN</title>
     <link rel="stylesheet" href="./css/index.css">
     <link rel="stylesheet" href="./css/login.css">
     <?php include './include/head.php'; ?>

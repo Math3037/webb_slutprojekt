@@ -6,7 +6,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title><?php echo NAME; ?></title>
+    <title><?=NAME?></title>
     <?php include './include/head.php'; ?>
 </head>
 <body>

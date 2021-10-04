@@ -21,8 +21,8 @@ function sendPasswordResetMail($token){
     $mail->IsHTML(true);
 
 
-    $mail->Username = "theo01sandell@gmail.com";
-    $mail->Password = "ggvujdfaihsooyvh";
+    $mail->Username = "CHANGE_ME";
+    $mail->Password = "CHANGE_ME";
 
 
     $mail->SetFrom("theo01sandell@gmail.com");

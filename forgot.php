@@ -59,7 +59,7 @@ if(isset($_POST['submit'])){
 <head>
     <?php include './include/head.php'; ?>
     <link rel="stylesheet" href="./css/forgot.css">
-    <title><?php echo NAME; ?> | Forgot password</title>
+    <title><?=NAME?> | Forgot password</title>
 </head>
 <body>
     <?php include './include/header.php'; ?>

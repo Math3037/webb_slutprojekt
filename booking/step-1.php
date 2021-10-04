@@ -39,7 +39,7 @@
 <head>
     <link rel="stylesheet" href="../css/booking_step.css">
     <link href="https://fonts.googleapis.com/css?family=Raleway:400,700" rel="stylesheet">
-    <title><?php echo NAME; ?> | Booking</title>
+    <title><?=NAME?> | Booking</title>
 </head>
 <body>
     <script>var day = <?php echo $day; ?>;</script>

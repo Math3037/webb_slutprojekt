@@ -59,7 +59,7 @@ if(isset($_SESSION['register_error'])){
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title><?php echo NAME; ?> | REGISTER</title>
+    <title><?=NAME?> | REGISTER</title>
     <link rel="stylesheet" href="./css/index.css">
     <link rel="stylesheet" href="./css/login.css">
     <?php include './include/head.php'; ?>

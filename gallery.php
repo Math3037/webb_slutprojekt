@@ -17,7 +17,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title><?php echo NAME; ?> | GALLERY</title>
+    <title><?=NAME?> | GALLERY</title>
     <link rel="stylesheet" href="./css/gallery.css">
     <?php include './include/head.php'; ?>
 </head>
